@@ -1,0 +1,103 @@
+/* 🌈 BODY BACKGROUND */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+}
+
+/* 🔥 NAVBAR */
+.navbar {
+  background: linear-gradient(to right, #141e30, #243b55) !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* 🎯 HEADINGS */
+h2, h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* 🛍️ CARDS */
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* 📸 CARD IMAGE */
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* 📝 CARD TEXT */
+.card-body {
+  text-align: center;
+}
+
+/* 🎨 BUTTON */
+.btn-primary {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+/* 🛒 CART TEXT */
+#cartItems p {
+  font-size: 18px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* 💰 TOTAL */
+#total {
+  font-weight: bold;
+  color: #000;
+}
+
+/* 🔵 CATEGORY IMAGES */
+.category-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.category-img:hover {
+  transform: scale(1.1);
+}
+
+/* 📦 CONTAINER SPACE */
+.container {
+  margin-top: 20px;
+}
+
+/* 🧾 FORM */
+input {
+  border-radius: 10px !important;
+  padding: 10px;
+}
+
+/* 🎉 ORDER PAGE */
+h1 {
+  color: green;
+}

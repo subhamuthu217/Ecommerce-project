@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Category</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">MyShop</a>
+
+    <div>
+      <a href="products.html" class="btn btn-light me-2">Products</a>
+      <a href="cart.html" class="btn btn-light">Cart</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <h2 id="categoryTitle"></h2>
+
+  <div class="row" id="productContainer"></div>
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+<script>
+// Get category from URL
+const params = new URLSearchParams(window.location.search);
+const type = params.get("type");
+
+// Title
+document.getElementById("categoryTitle").innerText = type.toUpperCase();
+
+// Products Data
+const products = {
+  shoes: [
+    {name:"Running Shoes", price:999, img:"https://images.unsplash.com/photo-1542291026-7eec264c27ff"},
+    {name:"Sports Shoes", price:1299, img:"https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb"}
+  ],
+  clothes: [
+    {name:"T-Shirt", price:499, img:"https://images.unsplash.com/photo-1523381210434-271e8be1f52b"},
+    {name:"Jeans", price:999, img:"https://images.unsplash.com/photo-1541099649105-f69ad21f3246"}
+  ],
+  accessories: [
+    {name:"Watch", price:1499, img:"https://images.unsplash.com/photo-1519741497674-611481863552"},
+    {name:"Bag", price:899, img:"https://images.unsplash.com/photo-1584917865442-de89df76afd3"}
+  ]
+};
+
+// Show products
+let container = document.getElementById("productContainer");
+
+products[type].forEach(p => {
+  container.innerHTML += `
+    <div class="col-md-4">
+      <div class="card">
+        <img src="${p.img}" class="card-img-top">
+        <div class="card-body">
+          <h5>${p.name}</h5>
+          <p>₹${p.price}</p>
+
+          <button onclick="addToCart('${p.name}', ${p.price})" 
+                  class="btn btn-primary">
+            Add to Cart
+          </button>
+
+        </div>
+      </div>
+    </div>
+  `;
+});
+</script>
+
+</body>
+</html>

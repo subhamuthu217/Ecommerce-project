@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ecommerce</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    #topBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Shop</a>
+
+    <div>
+      <a href="products.html" class="btn btn-light me-2">Products</a>
+      <a href="cart.html" class="btn btn-light">Cart</a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- Slider -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="https://via.placeholder.com/1200x400?text=Sale+1" class="d-block w-100">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://via.placeholder.com/1200x400?text=Sale+2" class="d-block w-100">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://via.placeholder.com/1200x400?text=Sale+3" class="d-block w-100">
+    </div>
+
+  </div>
+</div>
+
+<!-- Shop by Category -->
+<div class="container mt-5">
+  <h3>Shop by Category</h3>
+  <div class="row text-center">
+
+    <div class="col-md-4">
+      <div class="col-md-4 text-center">
+        <a href="category.html?type=shoes">
+  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" class="img-fluid"
+       style="width: 50px; height:50px; object-fit:cover;">
+  <p>Shoes</p>
+  </a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="col-md-4 text-center">
+            <a href="category.html?type=clothes">
+  <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b" class="img-fluid"
+       style="width:50px; height:50px; object-fit:cover;">
+  <p>Clothes</p>
+  </a>
+       </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="col-md-4 text-center">
+        <a href="category.html?type=accessories">
+        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3" class="img-fluid"
+       class="img-fluid"
+       style="width:50px; height:50px; object-fit:cover;">
+  <p>Accessories</p>
+  </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Latest Products -->
+<div class="container mt-5">
+  <h3>Latest Products</h3>
+  <div class="row">
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/71eUwDk8z+L._UY695_.jpg">
+        <div class="card-body">
+          <h5>Shoes</h5>
+          <p>₹999</p>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/61ybeKQto8L._UY679_.jpg">
+        <div class="card-body">
+          <h5>Watch</h5>
+          <p>₹1499</p>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/81QpkIctqPL._UY695_.jpg">
+        <div class="card-body">
+          <h5>Laptop</h5>
+          <p>₹899</p>
+          <button class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3 mt-5">
+  <p>© 2026 MyShop | All Rights Reserved</p>
+</footer>
+
+<!-- Scroll to Top -->
+<button onclick="topFunction()" id="topBtn" class="btn btn-primary">↑</button>
+
+<script>
+let btn = document.getElementById("topBtn");
+
+window.onscroll = function() {
+  if (document.documentElement.scrollTop > 100) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+function topFunction() {
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
